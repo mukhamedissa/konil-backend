@@ -5,10 +5,10 @@ from routers.tests import test_router as test_router
 from routers.articles import articles_router as articles_router
 from routers.quotes import quotes_router as quotes_router
 
+import os
+
 
 app = FastAPI()
-
-
 
 
 app.include_router(user_router)
@@ -19,4 +19,4 @@ app.include_router(articles_router)
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=os.getenv("PORT", default=8080))

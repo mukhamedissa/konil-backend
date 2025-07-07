@@ -24,4 +24,4 @@ echo "Postgres is up — running migrations"
 alembic upgrade head
 
 echo "Starting Uvicorn"
-exec uvicorn main:app --host 0.0.0.0 --port 8080
+exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}
