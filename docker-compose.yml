@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
     ports:
-      - "8000:8000"
+      - "8080:8080"
     env_file:
       - .env.local
     # If you prefer, you can mount your source to pick up live code changes:
