@@ -16,9 +16,9 @@ services:
     depends_on:
       - db
     ports:
-      - "8000:8000"
+      - "${PORT}:${PORT}"
     env_file:
-      - .env.local
+      - .env
     # If you prefer, you can mount your source to pick up live code changes:
     # volumes:
     #   - .:/app
